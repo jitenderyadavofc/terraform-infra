@@ -1,6 +1,3 @@
-provider "aws"{
- project = "lennar"
-}
 
 
 module "lakeformation" {
