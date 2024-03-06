@@ -1,13 +1,13 @@
 
-module "aws_lake_formation_permission" {
+module "lakeformation" {
   source  = "app.terraform.io/my-birla-org/lakeformation/aws"
   version = "0.9.1"
 
 
- # bucket_register = var.lf_register.bucket_arn
- # glue_arn= "arn:aws:iam::809244893916:role/AWSRoleGlue"
+  bucket_register = var.lf_register.bucket_arn
+  glue_arn= "arn:aws:iam::809244893916:role/AWSRoleGlue"
 
- # lf_permissions=var.lf_permissions 
+  lf_permissions=var.lf_permissions 
 
 }
 
