@@ -1,3 +1,7 @@
+provider "aws"{
+ project = "lennar"
+}
+
 
 module "lakeformation" {
   source  = "app.terraform.io/my-birla-org/lakeformation/aws"
