@@ -5,8 +5,7 @@ provider "aws"{
 
 module "lakeformation" {
   source  = "app.terraform.io/my-birla-org/lakeformation/aws"
-  version = "0.9.1"
-
+  version = "0.9.2"
 
   bucket_register = var.lf_register.bucket_arn
   glue_arn= "arn:aws:iam::809244893916:role/AWSRoleGlue"
