@@ -5,7 +5,7 @@ module "aws_lake_formation_permission" {
 
 
   bucket_register = var.lf_register.bucket_arn
-  glue_arn= local.glue_arn[0]
+  glue_arn= "arn:aws:iam::809244893916:role/AWSRoleGlue"
 
   lf_permissions=var.lf_permissions 
 
