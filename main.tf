@@ -17,7 +17,7 @@ module "aws_lake_formation_permission" {
   principle_arn    = local.glue_arn[0]
   db_name          = each.value.db_name
 
-  depends_on = [module.glue_crawler_mod, module.aws_lake_formation_register]
+  depends_on = [module.aws_lake_formation_register]
 }
 
 
