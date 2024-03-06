@@ -4,10 +4,10 @@ module "aws_lake_formation_permission" {
   version = "0.9.1"
 
 
-  bucket_register = var.lf_register.bucket_arn
-  glue_arn= "arn:aws:iam::809244893916:role/AWSRoleGlue"
+ # bucket_register = var.lf_register.bucket_arn
+ # glue_arn= "arn:aws:iam::809244893916:role/AWSRoleGlue"
 
-  lf_permissions=var.lf_permissions 
+ # lf_permissions=var.lf_permissions 
 
 }
 
