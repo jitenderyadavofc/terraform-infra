@@ -118,10 +118,12 @@ lf_register = {
 lf_permissions = [{
   lake_permissions = ["ALL", "CREATE_TABLE", "ALTER", "DROP"]
   db_name          = "ingest"
+ 
 },
 {
   lake_permissions = ["ALL", "CREATE_TABLE", "ALTER", "DROP"]
   db_name          = "ingestnew"
+
 }
 ]
 
