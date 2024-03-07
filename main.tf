@@ -21,7 +21,7 @@ module "lambda" {
      handler = each.value.handler
      runtime = each.value.runtime
      ephemeral_storage_size = each.value.ephemeral_storage_size
-     role_arn = var.lambda_role_arn
+     role_arn = each.value.lambda_role_arn
 
      source_file_name = each.value.source_file_name
      output_file_name = each.value.output_file_name
