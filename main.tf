@@ -12,8 +12,9 @@
 # }
 
 
-module "lambda_function" {
-   source = "./modules/lambda"
+module "lambda" {
+  source  = "app.terraform.io/my-birla-org/lambda/aws"
+  version = "0.9.1"
 
    for_each = { for function in var.lambda_functions: function.function_name => function  if length(var.lambda_functions)>0 }
      function_name = each.value.function_name
@@ -27,8 +28,6 @@ module "lambda_function" {
      env_variables = each.value.env_variables
 
      tags = var.custom_tags
-
-     depends_on = [ module.aws_iam_role_mod ]
 }
 
 
