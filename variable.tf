@@ -132,3 +132,7 @@ variable "glue_job_details" {
 variable "lf_register" {
   description = "lake formation register location"
 }
+
+variable "lambda_functions" {
+  description = "lambda function"
+}
