@@ -128,14 +128,14 @@ lf_permissions = [{
 ]
 
 lambda_functions=[{
-        function_name="athenix-lambda-function"
+        function_name="athenix-lambda-function-new"
         handler = "lambda_function.lambda_handler"
         runtime = "python3.8"
         ephemeral_storage_size = "512"
         lambda_role_arn= "arn:aws:iam::809244893916:role/AWSRoleForLambda"
 
         source_file_name = "lambda_function.py"
-        output_file_name = "lambda_function_new.zip"
+        output_file_name = "lambda_function_new2.zip"
 
         env_variables={
            ENV="Dev"
