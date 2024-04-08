@@ -1,0 +1,32 @@
+name: "Terraform plan"
+
+on:
+  push:
+     branches:
+            - main
+
+jobs:
+   terraform:
+         name: "Terraform"
+         runs-on: "ubuntu-latest"
+
+         steps:
+           - name: Checkout
+             uses: actions/checkout@v2
+
+
+           - name: setup terraform
+             uses: hashicorp/setup-terraform@v1
+
+           - name: Terraform Init
+             id: init
+             run: terraform init
+
+           - name: Terraform plan
+             id: plan
+             if: github.event_name == 'push'
+             run: terraform plan     
+
+
+
+                 
