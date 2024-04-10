@@ -14,31 +14,6 @@ jobs:
          steps:
            - name: Checkout
              uses: actions/checkout@v2
-			 
-           - name: Clone Terraform Code from Different Repo
-             run: git clone https://github.com/jitenderyadavofc/test-repo.git terraform
-
-           - name: copy config file
-	     run: cp config.auto.tfvars terraform
-      
-           - name: installing hashicorp
-             uses: hashicorp/setup-terraform@v1
-             with:
-                cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-
-           - name: Terraform Init
-             id: init
-	     working-directory: ./terraform
-             run: terraform init
-
-           - name: Terraform plan
-	     working-directory: ./terraform
-             id: plan
- #            if: github.event_name == 'push'
-             run: terraform plan     
-
-           - name: Terraform apply
-	     working-directory: ./terraform
-             id: apply
-    #         if: github.event_name == 'push'
-             run: terraform apply -auto-approve 
+	   - name: Clone terraform code
+             run : git clone https://github.com/jitenderyadavofc/test-repo.git terraform
+	     
