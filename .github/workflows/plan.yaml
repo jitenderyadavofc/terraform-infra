@@ -9,8 +9,6 @@ on:
 #            - main
 
 jobs:
-   approval:
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/staging' || github.ref == 'refs/heads/production'
    terraform:
          name: "Terraform"
          runs-on: "ubuntu-latest"
