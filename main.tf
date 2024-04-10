@@ -14,6 +14,7 @@
 
 module "lambda" {
   source  = "app.terraform.io/my-birla-org/lambda/aws"
+
   version = "0.9.1"
 
    for_each = { for function in var.lambda_functions: function.function_name => function  if length(var.lambda_functions)>0 }
