@@ -14,7 +14,12 @@ jobs:
          steps:
            - name: Checkout
              uses: actions/checkout@v2
-
+			 
+           - name: Clone Terraform Code from Different Repo
+             run: git clone https://github.com/jitenderyadavofc/test-repo.git terraform 
+			
+	         - name: Copy tfvars from Current Repo to Terraform Directory
+             run: cp config.auto.tfvars terraform/		
 
            - name: setup terraform
              uses: hashicorp/setup-terraform@v1
@@ -23,15 +28,17 @@ jobs:
 
            - name: Terraform Init
              id: init
+			       working-directory: ./terraform
              run: terraform init
 
            - name: Terraform plan
+		         working-directory: ./terraform
              id: plan
  #            if: github.event_name == 'push'
              run: terraform plan     
 
            - name: Terraform apply
+		         working-directory: ./terraform
              id: apply
     #         if: github.event_name == 'push'
-             run: terraform apply -auto-approve      
-
+             run: terraform apply -auto-approve 
