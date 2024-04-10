@@ -27,12 +27,12 @@ jobs:
 
            - name: Terraform plan
              id: plan
-             if: github.event_name == 'push'
+ #            if: github.event_name == 'push'
              run: terraform plan     
 
            - name: Terraform apply
              id: apply
-             if: github.event_name == 'push'
+    #         if: github.event_name == 'push'
              run: terraform apply -auto-approve      
 
 
