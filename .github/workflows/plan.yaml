@@ -2,6 +2,8 @@ name: "Terraform plan"
 
 on:
   workflow_dispatch:
+          permissions:
+             actions: write
 #  push:
 #     branches:
 #            - main
