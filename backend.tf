@@ -4,7 +4,7 @@ terraform {
     organization = "my-birla-org"
 
     workspaces {
-      prefix = "len-infra-"
+      prefix = "athenix"
     }
   }
 }
